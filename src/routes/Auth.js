@@ -17,7 +17,7 @@ export default function Auth() {
     const {
       target: { name, value },
     } = event;
-
+    console.log(event);
     if (name === 'email') {
       setEmail(value);
     } else if (name === 'password') {
