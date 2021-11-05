@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppRouter from 'components/Router';
 import { authService } from 'fbase';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -30,7 +30,7 @@ function App() {
     });
   };
   return (
-    <>
+    <div>
       {init ? (
         <AppRouter
           refreshUser={refreshUser}
@@ -41,7 +41,7 @@ function App() {
         'Intializing...'
       )}
       <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
-    </>
+    </div>
   );
 }
 
